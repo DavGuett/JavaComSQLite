@@ -9,9 +9,11 @@ public class Main {
     public static void main(String[] args) {
         var criaBanco = new Metodos();
         criaBanco.criarBanco("testando.db");
+
         System.out.println("Bem vindo!");
         System.out.println("-------------------");
         var menu = new Menu();
         menu.mostrarOpcoes();
+
     }
 }
