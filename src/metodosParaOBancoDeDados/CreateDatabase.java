@@ -2,7 +2,7 @@ package metodosParaOBancoDeDados;
 
 import java.sql.*;
 
-public class Metodos {
+public class CreateDatabase {
     public static void createDatabase(String database) {
         String url = "jdbc:sqlite:db/" + database;
         try (Connection connection = DriverManager.getConnection(url)){
@@ -18,9 +18,6 @@ public class Metodos {
             Statement sqlCommand = connection.createStatement();
             sqlCommand.execute("CREATE TABLE IF NOT EXISTS produtos" +
                     "(id INTEGER PRIMARY KEY, nome VARCHAR)");
-            // inserção inicial no banco para teste
-            sqlCommand.execute("INSERT INTO produtos (nome) VALUES ('Jornal')");
-            sqlCommand.execute("SELECT * FROM produtos");
         } catch (SQLException mensagem) {
             System.out.println(mensagem.getMessage());
         }
