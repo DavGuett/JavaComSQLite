@@ -1,5 +1,7 @@
 package telas;
 
+import metodosParaOBancoDeDados.Insert;
+
 import java.util.Scanner;
 
 public class IncluirItem {
@@ -7,6 +9,7 @@ public class IncluirItem {
         Scanner getInput = new Scanner(System.in);
         System.out.println("Escreva o nome do produto que deseja incluir: ");
         String nomeProduto = getInput.nextLine();
-        System.out.println(nomeProduto);
+        var insertProduct = new Insert();
+        insertProduct.insertInto(nomeProduto);
     }
 }
