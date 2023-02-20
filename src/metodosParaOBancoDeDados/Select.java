@@ -20,7 +20,7 @@ public class Select {
              ResultSet resultSet = sqlStatement.executeQuery(sqlCommand)){
 
             while (resultSet.next()) {
-                System.out.println(resultSet.getInt("id") + resultSet.getString("nome"));
+                System.out.println(resultSet.getInt("id") +" " +resultSet.getString("nome"));
             }
         } catch (SQLException message) {
             System.out.println(message.getMessage());
