@@ -4,7 +4,7 @@ import metodosParaOBancoDeDados.Insert;
 
 import java.util.Scanner;
 
-public class IncluirItem {
+public class AddItem {
     public void askForProductName() {
         Scanner getInput = new Scanner(System.in);
         System.out.println("Escreva o nome do produto que deseja incluir: ");

@@ -1,5 +1,3 @@
-import metodosParaOBancoDeDados.CreateDatabase;
-import metodosParaOBancoDeDados.Insert;
 import metodosParaOBancoDeDados.Select;
 import telas.*;
 
@@ -15,10 +13,10 @@ public class Main {
         Scanner getInput = new Scanner(System.in);
         int option = getInput.nextInt();
         if (option == 1) {
-            var incluirMenu = new IncluirItem();
+            var incluirMenu = new AddItem();
             incluirMenu.askForProductName();
         } else if (option == 2) {
-            var excluirMenu = new ExcluirItem();
+            var excluirMenu = new DeleteItem();
             excluirMenu.askForProductID();
         }
         else if (option == 3) {
