@@ -1,6 +1,6 @@
-package telas;
+package views;
 
-import metodosParaOBancoDeDados.Delete;
+import dbMethods.Delete;
 
 import java.util.Scanner;
 

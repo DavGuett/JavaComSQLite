@@ -1,4 +1,4 @@
-package metodosParaOBancoDeDados;
+package dbMethods;
 
 import java.sql.*;
 

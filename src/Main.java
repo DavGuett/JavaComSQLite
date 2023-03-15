@@ -1,5 +1,5 @@
-import metodosParaOBancoDeDados.Select;
-import telas.*;
+import dbMethods.Select;
+import views.*;
 
 import java.util.Scanner;
 

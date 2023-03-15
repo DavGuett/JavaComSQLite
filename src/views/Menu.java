@@ -1,4 +1,4 @@
-package telas;
+package views;
 
 public class Menu {
     public void showOptions(){

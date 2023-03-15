@@ -1,11 +1,11 @@
-package metodosParaOBancoDeDados;
+package dbMethods;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class Delete {
+public class Insert {
     private Connection connect() {
         String url = "jdbc:sqlite:db/testando.db";
         Connection connection = null;
@@ -17,12 +17,12 @@ public class Delete {
         return connection;
     }
 
-    public void deleteFrom(int id) {
-        String sqlCommand = "DELETE FROM Produtos WHERE id = ?";
+    public void insertInto(String nome) {
+        String sqlCommand = "INSERT INTO Produtos(nome) VALUES (?)";
         try (Connection connection = this.connect();
              PreparedStatement preparedStatement = connection.prepareStatement(sqlCommand)){
-            preparedStatement.setInt(1, id);
-            preparedStatement.executeUpdate();
+                preparedStatement.setString(1, nome);
+                preparedStatement.executeUpdate();
         } catch (SQLException message) {
             System.out.println(message.getMessage());
         }
